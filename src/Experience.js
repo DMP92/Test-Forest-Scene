@@ -30,7 +30,7 @@ export default function Experience()
 
         </EffectComposer>
 
-        <Perf position="top-left" />
+        {/* <Perf position="top-left" /> */}
 
         <OrbitControls makeDefault />
 
