@@ -2,6 +2,7 @@ import { useFrame } from '@react-three/fiber'
 import { useTexture, useGLTF, OrbitControls, Center, Sparkles } from '@react-three/drei'
 import { useRef } from 'react'
 import { Perf } from 'r3f-perf'
+import { DepthOfField, EffectComposer } from '@react-three/postprocessing'
 
 export default function Experience()
 {
@@ -19,6 +20,15 @@ export default function Experience()
     })
 
     return <>
+
+        <EffectComposer>
+            <DepthOfField 
+                focusDistance={ 0.025 }
+                focalLength={ 0.025 }
+                bokehScale={ 6 }
+            />
+
+        </EffectComposer>
 
         <Perf position="top-left" />
 
